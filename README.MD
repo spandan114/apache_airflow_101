@@ -27,6 +27,9 @@ Instead of doing this manually every day, Airflow automates it with DAGs.
 
 ---
 
+<img src="./images/architecture.png"/>
+<img src="./images/execution_process.png"/>
+
 ## 📌 How Airflow Works (Simple Diagram)
 
 ```mermaid
@@ -79,10 +82,12 @@ Now, someone needs to actually do the tasks. That "someone" is the executor—it
 4) Kubernetes Executor – Runs tasks in Docker containers dynamically on Kubernetes.
 
 ### Commands
+```
 airflow db init
 airflow scheduler
 airflow webserver -p 8080
 airflow users create --username admin --firstname {x} --lastname {y} --role Admin --email xy@gmail.com
+```
 
 ### Docker Airflow setup doc
 https://airflow.apache.org/docs/apache-airflow/2.1.1/start/docker.html
